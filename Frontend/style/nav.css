@@ -1,0 +1,52 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 40px;
+  }
+  #logo {
+    height: 100px;
+    width: 100px;
+  }
+#dropdown {
+    display: flex;
+}
+#dropdown_tools {
+  position: relative;
+}
+#dropdown_menu{
+    display: none;
+    position: absolute;
+    margin: auto;
+}
+#dropdown_menu a{
+  display: flex;
+  text-decoration: none;
+  flex-direction: row;
+}
+#dropdown_tools:hover #dropdown_menu {
+  display: block;
+}
+#login_signup{
+  display: flex;
+}
+.toppadding{
+  padding-top: 38px;
+}
+#login_signup h2 h1{
+  padding: 5px;
+  
+}
+
+
+@media all and (min-width: 300px) and (max-width: 600px) {
+#dropdown{
+    display: none;
+}
+nav{
+    padding-left: 5px;
+}
+#login{
+    display: none;
+}
+  }
