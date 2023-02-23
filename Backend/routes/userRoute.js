@@ -17,10 +17,10 @@ userRoute.get("/", async (req, res) => {
 
 
 
-userRoute.delete("delete/:id", async (req, res) => {
+userRoute.delete("/delete/:id", async (req, res) => {
     try {
         const id = req.params.id
-        await UserModel.findByIdAndDelete({ _id: id });
+        await UserModel.findByIdAndDelete({_id: id });
         res.send({"msg":`user has been deleted with id ${id}`})
     }
     catch (err) {
