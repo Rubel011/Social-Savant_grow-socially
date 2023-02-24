@@ -1,52 +1,79 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 25px;
-    padding-right: 40px;
-  }
-  #logo {
-    height: 100px;
-    width: 100px;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 40px;
+}
+#logo {
+  height: 100px;
+  width: 100px;
+}
 #dropdown {
-    display: flex;
+  display: flex;
+  gap:15px;
+}
+#dropdown>h1:hover{
+  color: blue;
 }
 #dropdown_tools {
   position: relative;
+  height: 25px;
+  /* border: 1px solid blue; */
+  border-radius: 5px;
+  padding: 3px;
 }
-#dropdown_menu{
-    display: none;
-    position: absolute;
-    margin: auto;
+#dropdown_menu {
+  display: none;
+  padding: 15px;
+  font-size: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  /* height: 150px; */
+  width: 100px;
+  position: absolute;
+  margin: auto;
+  background-color: #f5f5f5;
 }
-#dropdown_menu a{
+#dropdown_menu a {
+  padding: 5px;
+  color: black;
   display: flex;
   text-decoration: none;
   flex-direction: row;
 }
+#dropdown_menu a:hover{
+  color: blue;
+}
 #dropdown_tools:hover #dropdown_menu {
   display: block;
 }
-#login_signup{
+#login_signup {
   display: flex;
+  gap: 10px;
 }
-.toppadding{
+.toppadding {
   padding-top: 38px;
 }
-#login_signup h2 h1{
-  padding: 5px;
-  
+#login_signup h1 {
+  font-weight:lighter;
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  border: 1px solid blue;
+}
+#signup{
+  background-color: blue;
+  color: white;
 }
 
-
-@media all and (min-width: 300px) and (max-width: 600px) {
-#dropdown{
+@media all and (min-width: 200px) and (max-width: 792px) {
+  #dropdown {
     display: none;
-}
-nav{
-    padding-left: 5px;
-}
-#login{
-    display: none;
-}
   }
+  nav {
+    padding-left: 5px;
+  }
+  #login {
+    display: none;
+  }
+}
