@@ -2,6 +2,10 @@ let mainContainer=document.getElementById("main-container");
 let small=document.getElementById("small");
 let latest=document.getElementById("latest");
 let social=document.getElementById("social");
+let news=document.getElementById("news");
+let podcasts=document.getElementById("podcasts");
+let openBlog=document.getElementById("openBlog");
+let case1=document.getElementById("case1");
 
 let data;
 
@@ -22,6 +26,18 @@ latest.addEventListener("click",()=>{
 })
 social.addEventListener("click",()=>{
     displayCard(data[2].social)
+})
+news.addEventListener("click",()=>{
+    displayCard(data[2].news)
+})
+podcasts.addEventListener("click",()=>{
+    displayCard(data[2].podcasts)
+})
+openBlog.addEventListener("click",()=>{
+    displayCard(data[2].openBlog)
+})
+case1.addEventListener("click",()=>{
+    displayCard(data[2].case1)
 })
 
     function displayCard(data){
