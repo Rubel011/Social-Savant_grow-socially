@@ -1,4 +1,34 @@
-let myform = document.getElementById("form");
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in Page</title>
+    <link rel="shortcut icon" href="./images/Social (1).png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <a href="/signin.html">Log in</a>
+      </div>
+      <div id="signin">
+        <form id="form">
+          <input type="email" id="email" placeholder="Enter Your Email" />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Your Password"
+          />
+          <input type="submit" value="Submit" class="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+   let myform = document.getElementById("form");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let heading = document.getElementById("heading");
@@ -10,14 +40,22 @@ myform.addEventListener("submit", (event) => {
     email: myform.email.value,
     password: myform.password.value,
   };
-  fetching(payload)
+
+  if(payload.email=="rubelforidi@gmail.com"){
+      fetching(payload)
+  }else{
+    Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'You are not authorize!',
+          footer: '<a href="">Why do I have this issue?</a>'
+        })
+  }
 });
-
-
 function fetching(payload) {
   // let flag = false;
   console.log(payload);
-  fetch("https://frantic-red-pumps.cyclic.app/users/login", {
+  fetch("http://localhost:1500/users/login", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -34,12 +72,12 @@ function fetching(payload) {
         localStorage.setItem("userName",JSON.stringify(  res.name));
         localStorage.setItem("auth",true);
         Swal.fire(
-          'Good job signin successful!',
+          'Welcome to Admin Page!',
           'You clicked the button!',
           'success'
         )
         setTimeout(() => {
-          window.location.href = "index.html";
+          window.location.href = "admin.html";
         }, 2000);
       } else {
         // alert("Wrong Credentials");
@@ -63,4 +101,6 @@ function fetching(payload) {
   // } else {
   //   alert("Wrong Credentials");
   // }
-}
+} 
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

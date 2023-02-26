@@ -1,5 +1,5 @@
 const form = document.getElementById("form");
-const serverUrl = "http://localhost:1500/"
+const serverUrl = "https://frantic-red-pumps.cyclic.app/"
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const payload = {
@@ -7,7 +7,24 @@ form.addEventListener("submit", (e) => {
         email: form.email.value,
         password: form.password.value
     }
-    registered(payload)
+    if (payload.name.length>0&&payload.email.length>0&&payload.password.length>0) {
+        registered(payload)
+        Swal.fire(
+          'Good job signup successful!',
+          'You clicked the button!',
+          'success'
+        )
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 2000);
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'something went Wrong!',
+          footer: '<a href="">Why do I have this issue?</a>'
+        })
+      }
 })
 
 function registered(payload) {
@@ -23,6 +40,7 @@ function registered(payload) {
         })
         .then((res) => {
             console.log(res);
+            
         })
         .catch((err) => {
             console.log(err);

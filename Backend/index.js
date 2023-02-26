@@ -3,10 +3,14 @@ require("dotenv").config()
 const app = express();
 const { connection } = require("./db")
 const { userRoute } = require("./routes/userRoute")
-const cors=require("cors")
+const cors=require("cors");
+const fileupload=require("express-fileupload")
+const { blogRoute } = require("./routes/blogRoute");
+app.use(fileupload({useTempFiles:true}))
 app.use(express.json())
 app.use(cors())
 app.use("/users/", userRoute);
+app.use("/blogs/", blogRoute);
 app.listen(process.env.port, async () => {
     try {
         await connection;
