@@ -1,0 +1,58 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
+.container {
+  width: 40%;
+  /* height: 900px; */
+  margin: auto;
+  margin-top: 150px;
+  padding: 19px;
+  background-color: #ffebee;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.nav {
+  display: flex;
+  /* justify-content:; */
+  border-radius: 8px;
+  background-color: white;
+  width: 70%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* margin: 7px; */
+}
+.nav > a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  padding: 7px;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+.nav > a:first-child {
+  background-color: rgb(232, 9, 9);
+  border-radius: 5px;
+  /* margin: auto; */
+}
+input {
+  display: block;
+  margin: 19px;
+  padding: 7px;
+  width: 89%;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+.submit {
+  margin: auto;
+  width: 40%;
+  background-color: rgb(232, 9, 9);
+  font-weight: bold;
+  font-size: 15px;
+}
+#form {
+  margin: 35px;
+}

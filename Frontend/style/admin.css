@@ -1,0 +1,168 @@
+#buttons {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+#showUsers {
+  padding: 6px;
+  /* font-weight: bold; */
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+#addBlog {
+  padding: 6px;
+  /* font-weight: bold; */
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+#showBlogs > select {
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+#showBlogs > input {
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid blue;
+}
+main {
+  margin: 20px;
+}
+#container {
+  display: flex;
+}
+#main-container {
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.cart {
+  border-radius: 10px;
+  padding: 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.cart > img {
+  width: 100%;
+  /* border-radius: 5px; */
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+.cart > img ~ h3,
+div,
+p {
+  padding: 2px 8px;
+}
+.date{
+  display: flex;
+  justify-content: space-between;
+}
+.delete,
+.editbtn {
+  padding: 5px;
+}
+.author {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.author > img {
+  margin-right: 15px;
+  border-radius: 15px;
+}
+.btns button {
+  /* display: block; */
+  padding: 7px 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+.btns button:hover{
+    background-color: #03a9f4;
+}
+.btns {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#edit {
+  /* background: linear-gradient(to right,#eecda3,#eea8c6); */
+  background: linear-gradient(to right, #eecda3, #03a9f4);
+  width: 30%;
+  color: blue;
+  /* height: 50vh; */
+  padding: 8px;
+  border-radius: 15px;
+  margin-left: 65%;
+  position: fixed;
+  display: none;
+}
+#editForm {
+  display: flex;
+  flex-direction: column;
+}
+#editForm > input {
+  padding: 8px 5px;
+  border-radius: 10px;
+  border: 1px solid pink;
+  margin: 4px 0px;
+}
+/* #editForm>select{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid pink;
+    margin: 2px 0px;
+} */
+
+/* table styling--------- */
+
+#table {
+  /* border: 1px solid red; */
+  width: 65%;
+  /* margin: auto; */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  cursor: pointer;
+}
+
+#data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#data-table th,
+#data-table td {
+  border: 2px solid rgb(0, 0, 35);
+  padding: 8px;
+}
+#data-table th {
+  /* background: linear-gradient(to right,#eecda3,#eea8c6);  */
+  background: linear-gradient(to right, #eecda3, #03a9f4);
+}
+#data-table {
+  background-color: #f2f2f2;
+}
+
+#data-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#data-table tr:hover {
+  background-color: #ddd;
+}
+
+#data-table th {
+  text-align: center;
+}
+
+@media all and (min-width: 200px) and (max-width: 792px) {
+main{
+  margin: 10px;
+}
+  #main-container {
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

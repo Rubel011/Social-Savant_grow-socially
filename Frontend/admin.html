@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="./style/admin.css" />
+    <link rel="stylesheet" href="style/nav.css" />
+    <link rel="shortcut icon" href="./images/Social (1).png" type="image/x-icon">
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">
+        <img id="logo" src="./images/Social.png" alt="" />
+        <!-- <h1>Social</h1> -->
+      </a>
+      <div id="dropdown" class="toppadding">
+        <h1 id="dropdown_tools">
+          Tools
+          <div id="dropdown_menu">
+            <a href="#" class="dropdown_tools_menu"> <h2>Publishing</h2> </a>
+            <a href="#" class="dropdown_tools_menu"><h2>Analytics</h2></a>
+            <a href="#" class="dropdown_tools_menu"><h2>Engagement</h2></a>
+            <a href="#" class="dropdown_tools_menu"><h2>Start Page</h2></a>
+          </div>
+        </h1>
+        <h1 id="dropdown_tools">
+          Channels
+          <div id="dropdown_menu">
+            <a href="#" class="dropdown_tools_menu"> <h2>Facebook</h2> </a>
+            <a href="#" class="dropdown_tools_menu"
+              ><h2>Google Business Profile</h2></a
+            >
+            <a href="#" class="dropdown_tools_menu"><h2>Instagram</h2></a>
+            <a href="#" class="dropdown_tools_menu"><h2>Linkedin</h2></a>
+            <a href="#" class="dropdown_tools_menu"><h2>Mastodon</h2></a>
+            <a href="#" class="dropdown_tools_menu"><h2>Pinterest</h2></a>
+            <a href="#" class="dropdown_tools_menu"><h2>Shopify</h2></a>
+            <a href="#" class="dropdown_tools_menu"><h2>TikTok</h2></a>
+            <a href="#" class="dropdown_tools_menu"><h2>Twitter</h2></a>
+          </div>
+        </h1>
+        <h1 class="blogs"><a href="#">Pricing</a></h1>
+        <h1 class="blogs"><a href="./blog.html">Blogs</a></h1>
+      </div>
+      <div class="login_signup" class="toppadding">
+        <a href="./login.html" id="login">Log in</a>
+        <a href="./admin.html" id="login">Admin</a>
+        <a href="./signup.html" id="signup">Get started now</a>
+      </div>
+    </nav>
+    <main>
+      <div id="buttons">
+        <button id="showUsers">Show users</button>
+        <button id="addBlog">Add Blog</button>
+        <form action="" id="showBlogs">
+          <select name="cars" id="cars">
+            <option value="">----Select Blog Type----</option>
+            <option value="all">---All Blogs---</option>
+            <option value="latest">Latest Update</option>
+            <option value="small">Small Business</option>
+            <option value="social">Social Media Marketing</option>
+            <option value="news">News</option>
+            <option value="podcasts">Podcasts</option>
+            <option value="openblog">Open Blog</option>
+            <option value="casestudies">Case Studies</option>
+          </select>
+          <input type="submit" />
+        </form>
+      </div>
+      <div id="container">
+        <div id="main-container"></div>
+        <div id="edit">
+          <form action="" id="editForm">
+            <input type="text" id="id" placeholder="Blog Id" />
+            <input type="text" id="author" placeholder="Enter author Name" />
+            <input type="text" id="aimg" placeholder="enter author img Url" />
+            <input
+              type="text"
+              id="title"
+              placeholder="Enter title of the blog"
+            />
+            <input type="text" id="type" placeholder="Enter type of the blog" />
+            <input type="text" id="body" placeholder="Enter body of the blog" />
+            <input type="text" id="date" placeholder="Enter Date" />
+            <input type="text" id="bimg" placeholder="enter body img url" />
+            <select id="priority">
+              <option>--Select One--</option>
+              <option value="update">Edit Product</option>
+              <option value="add">Add Product</option>
+            </select>
+            <input type="submit" />
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script src="./script/admin.js"></script>
+<script src="script/nav.js"></script>
