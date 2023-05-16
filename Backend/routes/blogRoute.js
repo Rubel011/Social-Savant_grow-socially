@@ -5,9 +5,9 @@ require("dotenv").config()
 const cloudinary=require("cloudinary").v2
 const jwt = require("jsonwebtoken")
 cloudinary.config({ 
-    cloud_name: 'daqibyc29', 
-    api_key: '836321323429358', 
-    api_secret: 'IIrWiTqSKiwcuLl_4dwTdC5Ltxc',
+    cloud_name: process.env.cloud_name, 
+    api_key: process.env.api_key, 
+    api_secret: process.env.api_secret,
     secure: true
   });
 blogRoute.get("/", async (req, res) => {
